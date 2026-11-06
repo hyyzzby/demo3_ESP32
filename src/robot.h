@@ -3,6 +3,10 @@
 #include "eyes.h"
 #include "motion.h"
 #include "sound.h"
+#include "config.h"
+#if ROBOT_IS_S3
+#include "voice.h"  // S3 语音交互（audio.h 由其内部引入）
+#endif
 
 // 桌面陪伴机器人状态机
 // Idle：眨眼环视 + 显示时钟；被摸头 → Happy；暗光太久/没人理 → Sleep
@@ -24,6 +28,9 @@ private:
     RobotEyes   _eyes;
     RobotMotion _motion;
     RobotSound  _sound;
+#if ROBOT_IS_S3
+    RobotVoice  _voice;   // S3：摸头触发语音交互
+#endif
 
     State    _state = State::Idle;
     uint32_t _stateStart = 0;

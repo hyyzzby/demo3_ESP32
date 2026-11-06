@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" font-family="'Microsoft YaHei',sans-serif">
+  <defs>
+    <!-- 场景光 -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dbeafe"/>
+      <stop offset="0.55" stop-color="#eff6ff"/>
+      <stop offset="0.56" stop-color="#d6d3d1"/>
+      <stop offset="1" stop-color="#a8a29e"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#e7e5e4"/>
+      <stop offset="1" stop-color="#c8c3bd"/>
+    </linearGradient>
+    <linearGradient id="shellSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d6d3d1"/>
+      <stop offset="0.5" stop-color="#f5f5f4"/>
+      <stop offset="1" stop-color="#b8b2ac"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a6b4f"/>
+      <stop offset="1" stop-color="#7c5540"/>
+    </linearGradient>
+    <radialGradient id="eyeGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="1000" fill="url(#bg)"/>
+  <!-- 桌面 -->
+  <rect x="0" y="560" width="1400" height="440" fill="url(#desk)"/>
+  <ellipse cx="700" cy="620" rx="150" ry="18" fill="#000" opacity="0.28" filter="url(#soft)"/>
+  <ellipse cx="700" cy="618" rx="170" ry="20" fill="#3b2a20" opacity="0.35" filter="url(#soft)"/>
+
+  <!-- ============ 机器人 ============ -->
+  <g>
+    <!-- 底盘 -->
+    <ellipse cx="700" cy="590" rx="200" ry="36" fill="#57534e"/>
+    <ellipse cx="700" cy="580" rx="200" ry="36" fill="#78716c"/>
+    <ellipse cx="700" cy="578" rx="150" ry="24" fill="#a8a29e"/>
+    <!-- 底盘内舵机（pan）-->
+    <rect x="620" y="556" width="160" height="34" rx="8" fill="#3b82f6" opacity="0.85"/>
+    <circle cx="780" cy="573" r="14" fill="#93c5fd"/>
+    <text x="860" y="580" font-size="12" fill="#e7e5e4">SG90 底盘舵机</text>
+
+    <!-- 身体 -->
+    <path d="M 545 300 L 545 520 Q 545 560 585 560 L 815 560 Q 855 560 855 520 L 855 300 Z" fill="url(#shellSide)" stroke="#a8a29e" stroke-width="2"/>
+    <ellipse cx="700" cy="300" rx="155" ry="30" fill="#f5f5f4"/>
+
+    <!-- 胸前喇叭格栅（MAX98357A）-->
+    <g fill="#57534e">
+      <circle cx="640" cy="360" r="7"/><circle cx="672" cy="360" r="7"/><circle cx="704" cy="360" r="7"/><circle cx="736" cy="360" r="7"/><circle cx="768" cy="360" r="7"/>
+      <circle cx="656" cy="388" r="7"/><circle cx="688" cy="388" r="7"/><circle cx="720" cy="388" r="7"/><circle cx="752" cy="388" r="7"/>
+      <circle cx="640" cy="416" r="7"/><circle cx="672" cy="416" r="7"/><circle cx="704" cy="416" r="7"/><circle cx="736" cy="416" r="7"/><circle cx="768" cy="416" r="7"/>
+    </g>
+    <rect x="600" y="336" width="200" height="104" rx="14" fill="none" stroke="#c8c3bd" stroke-width="2" opacity="0.7"/>
+    <text x="852" y="392" font-size="12" fill="#57534e">喇叭格栅</text>
+
+    <!-- 状态灯 -->
+    <circle cx="820" cy="330" r="8" fill="#22c55e">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- 颈部舵机（tilt）-->
+    <rect x="650" y="236" width="100" height="52" rx="10" fill="#64748b"/>
+    <rect x="662" y="246" width="76" height="32" rx="8" fill="#475569"/>
+    <circle cx="760" cy="262" r="16" fill="#3b82f6"/>
+    <circle cx="760" cy="262" r="6" fill="#dbeafe"/>
+
+    <!-- 头部 -->
+    <g>
+      <path d="M 460 120 Q 460 60 530 60 L 870 60 Q 940 60 940 120 L 940 190 Q 940 250 870 250 L 530 250 Q 460 250 460 190 Z"
+            fill="url(#shell)" stroke="#b8b2ac" stroke-width="2"
+            transform="translate(0,10)"/>
+      <!-- 顶部高光 -->
+      <ellipse cx="700" cy="95" rx="180" ry="16" fill="#ffffff" opacity="0.55"/>
+      <!-- 面板 -->
+      <rect x="510" y="92" width="380" height="140" rx="24" fill="url(#screen)" stroke="#334155" stroke-width="3"/>
+      <!-- 眼睛（发光）-->
+      <g>
+        <circle cx="610" cy="160" r="34" fill="url(#eyeGlow)"/>
+        <circle cx="790" cy="160" r="34" fill="url(#eyeGlow)"/>
+        <rect x="580" y="136" width="60" height="46" rx="16" fill="#22d3ee"/>
+        <rect x="760" y="136" width="60" height="46" rx="16" fill="#22d3ee"/>
+        <rect x="588" y="142" width="16" height="10" rx="5" fill="#cffafe" opacity="0.9"/>
+        <rect x="768" y="142" width="16" height="10" rx="5" fill="#cffafe" opacity="0.9"/>
+      </g>
+      <!-- 腮红 -->
+      <ellipse cx="545" cy="196" rx="16" ry="7" fill="#fb7185" opacity="0.5"/>
+      <ellipse cx="855" cy="196" rx="16" ry="7" fill="#fb7185" opacity="0.5"/>
+      <!-- 顶部麦克风开孔（INMP441 在内部）-->
+      <circle cx="700" cy="76" r="7" fill="#44403c"/>
+      <circle cx="700" cy="76" r="3.5" fill="#1c1917"/>
+      <g stroke="#57534e" stroke-width="1">
+        <line x1="688" y1="69" x2="712" y2="83"/>
+        <line x1="688" y1="83" x2="712" y2="69"/>
+      </g>
+      <!-- 摸头区指示 -->
+      <path d="M 830 78 Q 880 66 922 84" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5,4" opacity="0.9"/>
+    </g>
+
+    <!-- 底盘接地线 -->
+    <path d="M 545 545 Q 520 570 520 588" fill="none" stroke="#44403c" stroke-width="3"/>
+    <path d="M 855 545 Q 880 570 880 588" fill="none" stroke="#44403c" stroke-width="3"/>
+  </g>
+
+  <!-- ============ 部件标注 ============ -->
+  <g font-size="13" fill="#1c1917">
+    <line x1="700" y1="76" x2="1080" y2="80" stroke="#64748b" stroke-width="1"/>
+    <circle cx="700" cy="76" r="3" fill="#64748b"/>
+    <text x="1086" y="84">INMP441 麦克风（顶部拾音孔）</text>
+
+    <line x1="940" y1="170" x2="1080" y2="170" stroke="#64748b" stroke-width="1"/>
+    <circle cx="940" cy="170" r="3" fill="#64748b"/>
+    <text x="1086" y="174">OLED 表情屏（眼睛/时钟）</text>
+
+    <line x1="922" y1="80" x2="1080" y2="130" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="1086" y="134" fill="#0369a1">摸头区（电容触摸 GPIO14）</text>
+
+    <line x1="860" y1="392" x2="1080" y2="392" stroke="#64748b" stroke-width="1"/>
+    <text x="1086" y="396">喇叭格栅（MAX98357A + 8Ω3W）</text>
+
+    <line x1="776" y1="262" x2="1080" y2="250" stroke="#64748b" stroke-width="1"/>
+    <circle cx="760" cy="262" r="3" fill="#64748b"/>
+    <text x="1086" y="254">SG90 颈部舵机（tilt · GPIO12）</text>
+
+    <text x="1086" y="580">SG90 底盘舵机（pan · GPIO11）</text>
+    <line x1="794" y1="573" x2="1080" y2="572" stroke="#64748b" stroke-width="1"/>
+    <circle cx="780" cy="573" r="3" fill="#64748b"/>
+
+    <text x="1086" y="330" fill="#15803d">状态灯（GPIO47）</text>
+    <line x1="828" y1="330" x2="1080" y2="326" stroke="#64748b" stroke-width="1"/>
+    <circle cx="820" cy="330" r="3" fill="#64748b"/>
+
+    <text x="330" y="660" fill="#57534e">触摸摸头 → 开心 + 录音回声自测</text>
+    <text x="330" y="682" fill="#57534e">接小智AI后 → 云端语音对话 🎙</text>
+  </g>
+
+  <!-- 标题 -->
+  <text x="700" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#1c1917">demo3_ESP32 · ESP32-S3 桌面陪伴机器人 · 效果示意图</text>
+  <text x="700" y="54" text-anchor="middle" font-size="13" fill="#78716c">v0.5 语音版 · 风格化渲染（非实物照片）· 表情屏 + 双舵机 + 语音对话底座</text>
+  <text x="700" y="975" text-anchor="middle" font-size="11" fill="#57534e">结构建议：头部容纳 OLED 与 INMP441，胸口格栅后装喇叭，颈部/底盘各一只 SG90，背面留光敏 LDR 开孔</text>
+</svg>

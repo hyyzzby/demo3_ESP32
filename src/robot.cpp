@@ -43,6 +43,13 @@ void Robot::begin() {
     _motion.playHello();
     while (_motion.busy()) { _motion.update(millis()); delay(5); }
 
+#if ROBOT_IS_S3
+    // ---- 语音链路自测（非阻塞，在待机中完成）：滴→录3s→嘟→回放 ----
+    _voice.begin(&Audio());
+    _eyes.bootScreen("Voice self-test", "say anything...");
+    _voice.start();
+#endif
+
     _enterState(State::Idle);
     Serial.println("[Robot] ready.");
 }
@@ -64,11 +71,15 @@ void Robot::_enterState(State s) {
             Serial.println("[Robot] -> Sleep");
             _sound.playYawn();
             _motion.rest();
+#if ROBOT_IS_S3
+            _voice.cancel();  // 语音交互随睡眠中止
+#endif
             break;
     }
 }
 
 // 被摸头：睡着先醒再开心；醒着直接开心（可连续摸连续爽）
+// S3 语音版：开心之外同时触发一次语音交互
 void Robot::_onPet() {
     Serial.println("[Robot] pet!");
     if (_state == State::Sleep) {
@@ -77,6 +88,9 @@ void Robot::_onPet() {
         return;
     }
     _enterState(State::Happy);
+#if ROBOT_IS_S3
+    if (!_voice.busy()) _voice.start();
+#endif
 }
 
 void Robot::_syncTime() {
@@ -97,6 +111,9 @@ void Robot::update() {
     uint32_t now = millis();
     _motion.update(now);
     _sound.update();
+#if ROBOT_IS_S3
+    _voice.update(now);
+#endif
 
     // ---- 触摸轮询（20ms，带 ±滞回消抖）----
     if (now - _lastTouchPoll >= 20) {
@@ -168,6 +185,9 @@ void Robot::update() {
     Expression expr = Expression::Neutral;
     if (_state == State::Happy)      expr = Expression::Happy;
     else if (_state == State::Sleep) expr = Expression::Sleepy;
+#if ROBOT_IS_S3
+    else if (_voice.phase() == RobotVoice::Recording) expr = Expression::Surprised;  // 录音中瞪大眼
+#endif
     _eyes.render(expr, _lookX, _lookY, _wifiOk, _timeStr);
 
     // ---- 状态 LED：待机慢闪 / 开心常亮 / 睡觉熄灭 ----
