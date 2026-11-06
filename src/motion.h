@@ -1,5 +1,6 @@
 #pragma once
 #include <ESP32Servo.h>
+#include "config.h"
 
 // 双舵机头部动作（水平 pan / 垂直 tilt）
 // look() 设定目标角度，update() 中按 SERVO_SPEED_DPS 平滑趋近；
