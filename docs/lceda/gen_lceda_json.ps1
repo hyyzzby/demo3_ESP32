@@ -129,12 +129,40 @@ Add-Text 300 106 "Board power: USB-C. Servo VCC (J5/J6) MUST be external 5V>=2A,
 Add-Text 720 90 "modules: J2 mic / J3 amp / J4 oled / J5 J6 servos" 8 "#64748b"
 
 $doc = [ordered]@{
-    head   = "1~1.7.5~~"
-    canvas = "CA~1200~1200~`#FFFFFF~yes~`#CCCCCC~10~1200~1200~line~10~pixel~5~400~300"
-    shape  = $shapes
+    editorVersion = "6.5.42"
+    docType       = 5           # 5 = 工程文件
+    title         = "demo3_ESP32 robot"
+    description   = "ESP32-S3 voice robot module schematic (generated)"
+    colors        = ""
+    schematics    = @(
+        [ordered]@{
+            docType     = 1       # 1 = 原理图
+            title       = "Sheet_1"
+            description = ""
+            dataStr     = [ordered]@{
+                head = [ordered]@{
+                    docType = "1"
+                    editorVersion = "6.5.42"
+                    newgId = $true
+                    c_para = [ordered]@{ "Prefix Start" = "1" }
+                    c_spiceCmd = "null"
+                    hasIdFlag = $true
+                    uuid = "d3m03sp32s3r0b0tsheet1a"
+                    x = "0"; y = "0"
+                    portOfADImportHack = ""
+                    importFlag = 0
+                    transformList = ""
+                }
+                canvas = "CA~1200~1200~#FFFFFF~yes~#CCCCCC~10~1200~1200~line~10~pixel~5~0~0"
+                shape  = $shapes
+                BBox   = [ordered]@{ x = 0; y = 0; width = 1200; height = 1000 }
+                colors = ""
+            }
+        }
+    )
 }
 $out = "D:\project-base\demo3_ESP32\docs\lceda\demo3_robot_s3_schematic.json"
-$doc | ConvertTo-Json -Depth 4 | Set-Content -Path $out -Encoding UTF8
+$doc | ConvertTo-Json -Depth 8 | Set-Content -Path $out -Encoding UTF8
 $check = Get-Content $out -Raw -Encoding UTF8 | ConvertFrom-Json
-"OK: head=[$($check.head)] canvas=[$($check.canvas)] shapes=$($check.shape.Count) -> $out"
-$check.shape | Select-Object -First 3
+"OK: docType=$($check.docType) schematics=$($check.schematics.Count) shapes=$($check.schematics[0].dataStr.shape.Count) -> $out"
+$check.schematics[0].dataStr.shape | Select-Object -First 3
