@@ -1,0 +1,2303 @@
+﻿{
+    "HEAD":  {
+                 "version":  "2019.1002",
+                 "editorVersion":  "v6.5"
+             },
+    "CANVAS":  {
+                   "width":  "1100",
+                   "height":  "1000"
+               },
+    "shape":  [
+                  {
+                      "type":  "RECT",
+                      "x":  300,
+                      "y":  120,
+                      "width":  90,
+                      "height":  340,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "J1",
+                                         ".name":  "J1"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  308,
+                      "y":  136,
+                      "text":  "ESP32-S3-DevKitC-1 (用到的引脚)",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  140,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "3V3",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  140,
+                      "x2":  410,
+                      "y2":  140,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "3V3"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  146,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "3V3",
+                      "text":  "3V3",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  160,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "5V",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  160,
+                      "x2":  410,
+                      "y2":  160,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "5V"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  166,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "5V",
+                      "text":  "5V",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  180,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  3,
+                      "pinName":  "GND",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  180,
+                      "x2":  410,
+                      "y2":  180,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "GND"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  186,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "GND",
+                      "text":  "GND",
+                      "color":  "#000000",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  200,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  4,
+                      "pinName":  "GPIO8/SDA",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  200,
+                      "x2":  410,
+                      "y2":  200,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SDA"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  206,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SDA",
+                      "text":  "SDA",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  220,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  5,
+                      "pinName":  "GPIO9/SCL",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  220,
+                      "x2":  410,
+                      "y2":  220,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SCL"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  226,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SCL",
+                      "text":  "SCL",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  240,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  6,
+                      "pinName":  "GPIO4/MIC_SCK",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  240,
+                      "x2":  410,
+                      "y2":  240,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "MIC_SCK"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  246,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "MIC_SCK",
+                      "text":  "MIC_SCK",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  260,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  7,
+                      "pinName":  "GPIO5/MIC_WS",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  260,
+                      "x2":  410,
+                      "y2":  260,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "MIC_WS"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  266,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "MIC_WS",
+                      "text":  "MIC_WS",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  280,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  8,
+                      "pinName":  "GPIO6/MIC_SD",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  280,
+                      "x2":  410,
+                      "y2":  280,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "MIC_SD"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  286,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "MIC_SD",
+                      "text":  "MIC_SD",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  300,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  9,
+                      "pinName":  "GPIO7/SPK_DIN",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  300,
+                      "x2":  410,
+                      "y2":  300,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SPK_DIN"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  306,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SPK_DIN",
+                      "text":  "SPK_DIN",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  320,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  10,
+                      "pinName":  "GPIO15/SPK_BCLK",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  320,
+                      "x2":  410,
+                      "y2":  320,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SPK_BCLK"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  326,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SPK_BCLK",
+                      "text":  "SPK_BCLK",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  340,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  11,
+                      "pinName":  "GPIO16/SPK_LRC",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  340,
+                      "x2":  410,
+                      "y2":  340,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SPK_LRC"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  346,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SPK_LRC",
+                      "text":  "SPK_LRC",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  360,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  12,
+                      "pinName":  "GPIO11/SERVO_PAN",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  360,
+                      "x2":  410,
+                      "y2":  360,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SERVO_PAN"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  366,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SERVO_PAN",
+                      "text":  "SERVO_PAN",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  380,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  13,
+                      "pinName":  "GPIO12/SERVO_TILT",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  380,
+                      "x2":  410,
+                      "y2":  380,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SERVO_TILT"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  386,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SERVO_TILT",
+                      "text":  "SERVO_TILT",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  400,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  14,
+                      "pinName":  "GPIO2/LDR_ADC",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  400,
+                      "x2":  410,
+                      "y2":  400,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "LDR_ADC"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  406,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "LDR_ADC",
+                      "text":  "LDR_ADC",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  420,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  15,
+                      "pinName":  "GPIO14/TOUCH",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  420,
+                      "x2":  410,
+                      "y2":  420,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "TOUCH"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  426,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "TOUCH",
+                      "text":  "TOUCH",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  390,
+                      "y":  440,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  16,
+                      "pinName":  "GPIO47/LED",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  390,
+                      "y1":  440,
+                      "x2":  410,
+                      "y2":  440,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "LED"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  410,
+                      "y":  446,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "LED",
+                      "text":  "LED",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "RECT",
+                      "x":  700,
+                      "y":  120,
+                      "width":  160,
+                      "height":  140,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "J2",
+                                         ".name":  "J2"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  708,
+                      "y":  136,
+                      "text":  "INMP441 麦克风",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  140,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "VDD",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J2"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  140,
+                      "x2":  680,
+                      "y2":  140,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "3V3"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  146,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "3V3",
+                      "text":  "3V3",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  160,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "GND",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J2"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  160,
+                      "x2":  680,
+                      "y2":  160,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "GND"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  166,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "GND",
+                      "text":  "GND",
+                      "color":  "#000000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  180,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  3,
+                      "pinName":  "L/R",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J2"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  180,
+                      "x2":  680,
+                      "y2":  180,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "GND"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  186,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "GND",
+                      "text":  "GND",
+                      "color":  "#000000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  200,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  4,
+                      "pinName":  "SCK",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J2"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  200,
+                      "x2":  680,
+                      "y2":  200,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "MIC_SCK"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  206,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "MIC_SCK",
+                      "text":  "MIC_SCK",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  220,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  5,
+                      "pinName":  "WS",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J2"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  220,
+                      "x2":  680,
+                      "y2":  220,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "MIC_WS"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  226,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "MIC_WS",
+                      "text":  "MIC_WS",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  240,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  6,
+                      "pinName":  "SD",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J2"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  240,
+                      "x2":  680,
+                      "y2":  240,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "MIC_SD"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  246,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "MIC_SD",
+                      "text":  "MIC_SD",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "RECT",
+                      "x":  700,
+                      "y":  360,
+                      "width":  150,
+                      "height":  200,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "J3",
+                                         ".name":  "J3"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  708,
+                      "y":  376,
+                      "text":  "MAX98357A 功放",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  380,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "VIN",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  380,
+                      "x2":  680,
+                      "y2":  380,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "5V"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  386,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "5V",
+                      "text":  "5V",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  400,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "GND",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  400,
+                      "x2":  680,
+                      "y2":  400,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "GND"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  406,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "GND",
+                      "text":  "GND",
+                      "color":  "#000000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  420,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  3,
+                      "pinName":  "SD",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  420,
+                      "x2":  680,
+                      "y2":  420,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "3V3"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  426,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "3V3",
+                      "text":  "3V3",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  440,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  4,
+                      "pinName":  "GAIN",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  440,
+                      "x2":  680,
+                      "y2":  440,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "NC"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  446,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "NC",
+                      "text":  "NC",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  460,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  5,
+                      "pinName":  "DIN",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  460,
+                      "x2":  680,
+                      "y2":  460,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SPK_DIN"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  466,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SPK_DIN",
+                      "text":  "SPK_DIN",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  480,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  6,
+                      "pinName":  "BCLK",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  480,
+                      "x2":  680,
+                      "y2":  480,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SPK_BCLK"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  486,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SPK_BCLK",
+                      "text":  "SPK_BCLK",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  500,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  7,
+                      "pinName":  "LRC",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  500,
+                      "x2":  680,
+                      "y2":  500,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SPK_LRC"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  506,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SPK_LRC",
+                      "text":  "SPK_LRC",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  520,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  8,
+                      "pinName":  "OUT+",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  520,
+                      "x2":  680,
+                      "y2":  520,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SPK+"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  526,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SPK+",
+                      "text":  "SPK+",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  540,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  9,
+                      "pinName":  "OUT-",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J3"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  540,
+                      "x2":  680,
+                      "y2":  540,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SPK-"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  546,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SPK-",
+                      "text":  "SPK-",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "RECT",
+                      "x":  700,
+                      "y":  600,
+                      "width":  140,
+                      "height":  100,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "J4",
+                                         ".name":  "J4"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  708,
+                      "y":  616,
+                      "text":  "OLED SSD1306",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  620,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "VCC",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J4"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  620,
+                      "x2":  680,
+                      "y2":  620,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "3V3"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  626,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "3V3",
+                      "text":  "3V3",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  640,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "GND",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J4"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  640,
+                      "x2":  680,
+                      "y2":  640,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "GND"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  646,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "GND",
+                      "text":  "GND",
+                      "color":  "#000000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  660,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  3,
+                      "pinName":  "SCL",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J4"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  660,
+                      "x2":  680,
+                      "y2":  660,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SCL"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  666,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SCL",
+                      "text":  "SCL",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  680,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  4,
+                      "pinName":  "SDA",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J4"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  680,
+                      "x2":  680,
+                      "y2":  680,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SDA"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  686,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SDA",
+                      "text":  "SDA",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "RECT",
+                      "x":  700,
+                      "y":  760,
+                      "width":  140,
+                      "height":  80,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "J5",
+                                         ".name":  "J5"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  708,
+                      "y":  776,
+                      "text":  "SG90 水平pan",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  780,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "SIG",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J5"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  780,
+                      "x2":  680,
+                      "y2":  780,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SERVO_PAN"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  786,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SERVO_PAN",
+                      "text":  "SERVO_PAN",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  800,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "VCC",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J5"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  800,
+                      "x2":  680,
+                      "y2":  800,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "5V"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  806,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "5V",
+                      "text":  "5V",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  820,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  3,
+                      "pinName":  "GND",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J5"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  820,
+                      "x2":  680,
+                      "y2":  820,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "GND"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  826,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "GND",
+                      "text":  "GND",
+                      "color":  "#000000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "RECT",
+                      "x":  700,
+                      "y":  900,
+                      "width":  140,
+                      "height":  80,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "J6",
+                                         ".name":  "J6"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  708,
+                      "y":  916,
+                      "text":  "SG90 垂直tilt",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  920,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "SIG",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J6"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  920,
+                      "x2":  680,
+                      "y2":  920,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "SERVO_TILT"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  926,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "SERVO_TILT",
+                      "text":  "SERVO_TILT",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  940,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "VCC",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J6"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  940,
+                      "x2":  680,
+                      "y2":  940,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "5V"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  946,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "5V",
+                      "text":  "5V",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  700,
+                      "y":  960,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  3,
+                      "pinName":  "GND",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J6"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  700,
+                      "y1":  960,
+                      "x2":  680,
+                      "y2":  960,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "GND"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  680,
+                      "y":  966,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "GND",
+                      "text":  "GND",
+                      "color":  "#000000",
+                      "fontSize":  7,
+                      "rotation":  180
+                  },
+                  {
+                      "type":  "RECT",
+                      "x":  120,
+                      "y":  560,
+                      "width":  130,
+                      "height":  60,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "J7",
+                                         ".name":  "J7"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  128,
+                      "y":  576,
+                      "text":  "LDR 光敏",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  250,
+                      "y":  580,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "TOP",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J7"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  250,
+                      "y1":  580,
+                      "x2":  270,
+                      "y2":  580,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "3V3"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  270,
+                      "y":  586,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "3V3",
+                      "text":  "3V3",
+                      "color":  "#FF0000",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  250,
+                      "y":  600,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "BOT",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J7"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  250,
+                      "y1":  600,
+                      "x2":  270,
+                      "y2":  600,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "LDR_ADC"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  270,
+                      "y":  606,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "LDR_ADC",
+                      "text":  "LDR_ADC",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "RECT",
+                      "x":  120,
+                      "y":  660,
+                      "width":  130,
+                      "height":  60,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "R1",
+                                         ".name":  "R1"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  128,
+                      "y":  676,
+                      "text":  "R1 10K 0603",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  250,
+                      "y":  680,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "1",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "R1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  250,
+                      "y1":  680,
+                      "x2":  270,
+                      "y2":  680,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "LDR_ADC"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  270,
+                      "y":  686,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "LDR_ADC",
+                      "text":  "LDR_ADC",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  250,
+                      "y":  700,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "2",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "R1"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  250,
+                      "y1":  700,
+                      "x2":  270,
+                      "y2":  700,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "GND"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  270,
+                      "y":  706,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "GND",
+                      "text":  "GND",
+                      "color":  "#000000",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "RECT",
+                      "x":  120,
+                      "y":  780,
+                      "width":  130,
+                      "height":  60,
+                      "fill":  "none",
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "attributes":  {
+                                         ".part":  "J8",
+                                         ".name":  "J8"
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  128,
+                      "y":  796,
+                      "text":  "触摸线(T14)",
+                      "fill":  "#000000",
+                      "fontSize":  9,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  250,
+                      "y":  800,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  1,
+                      "pinName":  "T",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J8"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  250,
+                      "y1":  800,
+                      "x2":  270,
+                      "y2":  800,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "O"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  270,
+                      "y":  806,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "O",
+                      "text":  "O",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "PIN",
+                      "x":  250,
+                      "y":  820,
+                      "attributes":  {
+                                         ".api_":  1,
+                                         ".do":  1
+                                     },
+                      "pinNumber":  2,
+                      "pinName":  "T",
+                      "pinDotVisible":  1,
+                      "pinClock":  0,
+                      "pinSpotSize":  2,
+                      "pinSquare":  1,
+                      "pinExtend":  20,
+                      "pinHide":  0,
+                      "pinNet":  "",
+                      "pinPart":  "J8"
+                  },
+                  {
+                      "type":  "WIRE",
+                      "x1":  250,
+                      "y1":  820,
+                      "x2":  270,
+                      "y2":  820,
+                      "stroke":  "#000000",
+                      "strokeWidth":  1,
+                      "net":  "O"
+                  },
+                  {
+                      "type":  "NETFLAG",
+                      "x":  270,
+                      "y":  826,
+                      "attributes":  {
+                                         ".net":  1,
+                                         ".netflag":  1
+                                     },
+                      "net":  "O",
+                      "text":  "O",
+                      "color":  "#1D2064",
+                      "fontSize":  7,
+                      "rotation":  0
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  700,
+                      "y":  60,
+                      "text":  "demo3_ESP32 · ESP32-S3 语音版 · 模块级原理图 (立创EDA标准版JSON)",
+                      "fill":  "#000000",
+                      "fontSize":  12,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  700,
+                      "y":  84,
+                      "text":  "导入: 立创EDA专业版 → 文件 → 导入 → 立创EDA标准版。J1 竖排排针代表 DevKitC 所用引脚",
+                      "fill":  "#64748b",
+                      "fontSize":  8,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  },
+                  {
+                      "type":  "TEXT",
+                      "x":  700,
+                      "y":  104,
+                      "text":  "供电: 板子 USB-C 自供电; 舵机 VCC 必须外接 5V\u003e=2A 且与板 GND 共地 (J5/J6)",
+                      "fill":  "#dc2626",
+                      "fontSize":  8,
+                      "rotation":  0,
+                      "attributes":  {
+                                         ".name":  1
+                                     }
+                  }
+              ]
+}
