@@ -1,7 +1,7 @@
 # 📋 MADEOFF — 工作交接文档
 
-> 更新时间：2026-11-06 中午（暂停前）
-> 用途：记录 demo3_ESP32 项目当前状态，方便下午（或任何人）无缝续接
+> 更新时间：2026-11-06 下午（v0.4.0 发布）
+> **当前状态：✅ 编译通过，v0.4.0 已打标签发布。剩余工作只有硬件实测。**
 
 ---
 
@@ -40,13 +40,19 @@
 
 ## 三、未完成 ⏳
 
-1. **编译验证**：`pio run` 从未成功跑完（一直卡在下载阶段），代码有编译错误的可能
-2. **库安装**：lib_deps（U8g2、ESP32Servo）尚未安装，`pio run` 会自动装（小文件走 python 下载器一般没问题，不行就手动 curl）
-3. **修编译错误 → commit + push**
-4. **打 tag**：`v0.4.0` 并推送（首个正式版）
-5. **WiFi 配置**：`src/config.h` 第 26-27 行占位符，需用户真实 WiFi（⚠️ 不要把真实密码提交，建议改成编译时 `-DWIFI_SSID=...` 注入或 git update-index --skip-worktree）
-6. **硬件实测**：用户侧烧录 + 接线验证（docs/hardware.md）
-7. **安全收尾**：⚠️ 对话中暴露过 2 个 fine-grained token（均权限不全）→ 应去 github.com/settings/personal-access-tokens **Revoke**；classic token（ghp_YiHS...）也建议下午轮换
+1. ~~编译验证~~ ✅ 2026-11-06 下午完成：RAM 14.6% / Flash 61.7%，tag `v0.4.0` 已推送
+2. ~~库安装~~ ✅ U8g2 / ESP32Servo 已随构建自动装好
+3. ~~修编译错误~~ ✅ `motion.h` 补 `#include "config.h"`（a0fa628）
+4. ~~打 tag~~ ✅ `v0.4.0` 已推送
+5. **WiFi 配置**：`src/config.h` 第 26-27 行占位符，烧录前需改成真实 WiFi（⚠️ 不要提交真实密码）
+6. **硬件实测**：用户烧录 + 按 docs/hardware.md 接线验证（串口日志 115200 观察状态机流转）
+7. **安全收尾**：⚠️ 对话中暴露过 2 个 fine-grained token（均权限不全）→ 去 github.com/settings/personal-access-tokens **Revoke**；classic token（ghp_YiHS...）建议轮换
+
+### 编译环境备忘（换机/重装时用）
+- 平台 espressif32@6.12.0（platformio.ini 已锁定版本）、Arduino core 2.0.17
+- 已装：toolchain-xtensa-esp32@8.4.0、tool-esptoolpy@2.40900、framework-arduinoespressif32@3.20017.241212
+- 框架包 235MB 的离线安装妙招：curl 直连下载 tarball → 算 `sha1(url + sha256)` → 放进 `~/.platformio/.cache/downloads/<sha1>` → `pio run` 自动识别为缓存命中，全程不走网络（详见问题 #9）
+- 库 U8g2/ESP32Servo 小文件，python 下载器可正常拉取
 
 ## 四、遇到的问题 & 解决方法 🔧
 
@@ -60,6 +66,9 @@
 | 6 | registry API 查包 404/400 | **owner 猜错了**：工具链在 `espressif` 名下，工具在 `platformio` 名下，框架类型路径带 framework 会 400 | 6.12.0 工具链真实版本：`espressif/toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5`（从安装日志拿到） |
 | 7 | 误杀自己的 shell（exit 255） | 进程过滤 `-like "*platformio*"` 匹配到了自己命令行里的 URL | 过滤词避开自身命令行包含的字符串 |
 | 8 | PowerShell 管道看似无输出 | `Select-Object -Last N` 会吞掉全部流式输出直到结束 | 长任务用 `Out-File` 实时写日志再 tail |
+| 9 | framework 包 235MB 反复下载失败 | ① 代理客户端对大文件掉链子（换网/换端口都一样）；② registry API 一直 400 是因为 **framework 在 registry 里是 tool 类型**（PackageType 只有 library/platform/tool） | 三连招：API 拿精确 URL+sha256 → curl 直连下载（`--retry 30 -C -`）→ **读 PIO 源码**发现缓存 key = `sha1(url+sha256)`，把 tarball 种进 `.cache/downloads/` 秒过 ✅ |
+| 10 | `pio pkg install` 没有 `--framework` 选项 | 框架包只能由平台构建时自动安装 | 用问题 #9 的缓存种子方案绕过 |
+| 11 | 编译报 `SERVO_PAN_CENTER was not declared` | motion.h 用了 config.h 的宏但没 include | motion.h 顶部加 `#include "config.h"` ✅（唯一一个代码错误！） |
 
 **关键配方（保底，已验证）**：
 ```powershell
