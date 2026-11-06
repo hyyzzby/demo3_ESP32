@@ -119,3 +119,27 @@ git add -A; git commit -m "..."; git push
 - CLI：`& "$env:USERPROFILE\.local\bin\easyeda.exe" <cmd> --project "New Project_2026-11-06_23-14-14"`
 - 网络又变：git 代理已改 **127.0.0.1:21956**；直连 GitHub 目前也通
 - 官方文档：docs.easyeda.com → DocumentFormat/2-Schematic-File-Format（shape 语法）
+
+## 📌 附录2：立创EDA交互操作当前状态（2026-11-07 凌晨暂停）
+
+### 当前页面状态（混浊，建议明早清页重来）
+- P1：MCU块+AMS块+按键块完好；但**5个孤儿未删净**（D1/D2/J1/R3/R4，usbc首次失败残留，prim-delete 显示组注册移除但 sch list 仍见）+ LED块第一次落错位置(1070,870 界外)已删
+- P2：USB-C块完好；**LED块误落P2**（LED1+R7，R7已删LED1还在）+ 我加的2个 USB_VBUS 标签与块内 D4_N1 命名冲突（net-marker-mismatch ×2）
+- 两页均已保存(saved:true)， Autosave 也在
+
+### 明早干净重来方案（推荐，~15分钟）
+1. `easyeda sch clear --doc P1 --project "New Project_2026-11-06_23-14-14"` 清空P1，同法清P2
+2. P1 顺序：block-apply esp32s3_wroom1_module --at 600,400 → tactile_boot_reset --at 150,700 → led_indicator_gpio --at 430,660 --bind CTRL=GPIO47
+3. P2（page-new 后）：block-apply usbc_ufp_power_or --at 200,250 → ams1117_ldo_3v3 --at 200,600
+4. U1 引脚网络标签15个（connect --pin U1:IO4 --kind net_label --net MIC_SCK …清单见下）
+5. 外设连接器：lib search 排针 → sch place → sch connect
+6. 每页 sch check → sch gate → sch save（必须 saved:true）
+
+### U1 引脚网络标签清单（已验证可用的命令模式）
+IO4=MIC_SCK IO5=MIC_WS IO6=MIC_SD IO7=SPK_DIN IO15=SPK_BCLK IO16=SPK_LRC IO8=SDA IO9=SCL IO11=SERVO_PAN IO12=SERVO_TILT IO2=LDR_ADC IO14=TOUCH IO47=GPIO47 IO19=USB_DP IO20=USB_DM
+（NC：IO1/3/10/13/17/18/21/35/36/37/38/39/40/41/42/45/46/48；注意 EPAD 接 GND 不 NC）
+
+### 经验教训
+- block-apply 落块前**必须确认活动页**（--doc P1 有时未生效，LED块落到了P2）；apply 后立即 sch list 验证
+- prim-delete 显示"组注册将移除"不等于已删——删后必须 sch list 复读
+- U1 右缘引脚 stub 出线 20px 即 665 列，与块布局的器件体冲突时会静默漂浮——用 --offset 40 或先挪遮挡器件
