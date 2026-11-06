@@ -15,5 +15,9 @@ cmake-build-*/
 .DS_Store
 Thumbs.db
 
+# 日志与临时产物
+*.log
+build.log
+
 # 敏感配置（如后续拆分出 secrets.h 请勿提交）
 src/secrets.h
