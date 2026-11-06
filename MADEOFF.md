@@ -96,3 +96,26 @@ git add -A; git commit -m "..."; git push
 
 ---
 *项目仓库含 12 提交 / 2 tag（v0.4.0, v0.5.1）/ MIT License。由 OpenCode (GLM) 协助完成。*
+
+---
+
+# 📌 附录：2026-11-06 深夜 · 立创EDA软件内自动化进展
+
+## 已完成 ✅
+- 安装 easyeda-agent 全家桶：CLI v1.16.0（`%USERPROFILE%\.local\bin\easyeda.exe`）+ daemon（端口60832）+ Pro客户端连接器扩展（用户已导入并勾选允许外部交互）
+- 客户端工程：`New Project_2026-11-06_23-14-14`（Schematic1/P1 + P2 + PCB 页）
+- **P1 已放置**：MCU块（U1=ESP32-S3-WROOM-1 C9900163599 + C1 10uF + C2 1uF + C3 100nF + R1/R2 10K + 电源地标签）、AMS1117电源块（U2 C6186 + C4/C5/C6 + +5V/+3V3/GND标签）、按键块（SW1/SW2 C720477）
+- **P2 已放置**：USB-C电源块（J2 TYPE-C-31-M-12 C9900012665 + D4 SS34 + D5 USBLC6 + R5/R6 5.1K CC下拉）
+- B7(DN2) 漏线已补、SBU1/2 已打 NC、USB_VBUS 岛屿已并网、图签已填、两页已保存(saved:true)
+
+## 待办 ⏳（明天从这里继续）
+1. P1：12 个 out-of-sheet 图元挪回（`sch layout-lint`）、61 悬空脚处理（未用 GPIO 批量 NC：`sch no-connect`；已用脚打标签：`sch connect --pin U1:IO4 --kind net_label --net GPIO4` 逐脚）
+2. P1：外设连接器 ~10 个（`easyeda lib search` 找 2.54 排针 → `sch place` → `sch connect` 绑 GPIO4/5/6/7/8/9/11/12/2/14/47 网络名）+ I2C 上拉 4.7K×2 + LDR 分压 R
+3. P2：destagger --apply 再跑一次清余留重叠；peripheral-not-direct WARN 已用 USB_VBUS 标签并网（电气正确，保留 WARN 说明即可）
+4. **原理图转 PCB**：查 `easyeda board`/`pcb` 命令组 → 板框 → 布局（WROOM 天线禁布区规则已内置于块）→ 布线 → 铺铜 → DRC → 保存
+5. LED 块 CTRL 已绑 GPIO47；注意 U1 引脚用「名字或编号」都可（sch read 可查）
+
+## 环境备忘
+- CLI：`& "$env:USERPROFILE\.local\bin\easyeda.exe" <cmd> --project "New Project_2026-11-06_23-14-14"`
+- 网络又变：git 代理已改 **127.0.0.1:21956**；直连 GitHub 目前也通
+- 官方文档：docs.easyeda.com → DocumentFormat/2-Schematic-File-Format（shape 语法）
