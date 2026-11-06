@@ -32,13 +32,22 @@
 3. 注册 xiaozhi.me → 添加设备 → 输入验证码 → 对话即通
 4. **代价**：我们的表情/舵机代码不在此固件里（只有语音）
 
-### 路线 B：xiaozhi 源码二次开发（推荐终点，2-3 天）
-1. clone 官方仓库，路线 A 跑通基线
-2. 在其板级抽象上叠加我们的能力：
-   - 表情：把 `src/eyes.cpp` 的 U8g2 渲染挂到它的 `Display` 接口（idle 时画眼睛，对话时画声波）
-   - 动作：把 `src/motion.cpp` 挂到它的「设备状态回调」（唤醒→抬头，说话→点头）
-   - 触摸：`touchRead(T14)` 接它的手动唤醒事件
-3. 我们的 `src/` 模块化设计就是为此准备的，迁移 = 移文件+适配接口，不重写逻辑
+### 路线 B：xiaozhi 源码二次开发（推荐终点）——✅ 成品已就绪
+
+**迁移工作已经完成**！本仓库 [`xiaozhi-board/`](../xiaozhi-board/) 目录就是为官方仓库
+量身定制的板级包（复制即用）：
+
+1. 按官方 README 安装 **ESP-IDF v6.0.1+**（推荐 release/v6.1，v5.x 不再支持）
+2. clone 官方仓库 → 把 `xiaozhi-board/demo3-robot-s3/` 拷入 `main/boards/`
+3. 改 2 处注册（CMakeLists.txt + Kconfig.projbuild，精确写法见 [`xiaozhi-board/INSTALL.md`](../xiaozhi-board/INSTALL.md)）
+4. `idf.py build flash` → xiaozhi.me 激活 → **开聊**
+5. 对机器人说「点一下头」「看左边」—— 舵机经 MCP 工具响应语音指令 ✨
+
+已在板级包里实现的定制：
+- 电容触摸 T14（自研基线校准按钮，按住=说话）
+- 头部双舵机 MCP 工具（`self.robot.set_head / nod / center`）
+- OLED 8/9 引脚 + 128x64 分辨率
+- 移除官方面包板的音量键/灯控 GPIO
 
 ### 路线 C：本仓库内自研精简协议（学习向）
 不用 xiaozhi 固件，直接对接兼容其 WebSocket 协议的服务端：
