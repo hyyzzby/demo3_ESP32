@@ -34,13 +34,14 @@
 
 ### 路线 B：xiaozhi 源码二次开发（推荐终点）——✅ 成品已就绪
 
-**迁移工作已经完成**！本仓库 [`xiaozhi-board/`](../xiaozhi-board/) 目录就是为官方仓库
-量身定制的板级包（复制即用）：
+**迁移工作已经完成**！官方源码已并入本仓库 `xiaozhi-esp32/`，且
+[`main/boards/demo3-robot-s3/`](../xiaozhi-esp32/main/boards/demo3-robot-s3/) 板级包已拷入、
+CMakeLists/Kconfig 两处注册已改好（见 `xiaozhi-esp32/UPSTREAM.md`）——装好 ESP-IDF 即可构建：
 
 1. 按官方 README 安装 **ESP-IDF v6.0.1+**（推荐 release/v6.1，v5.x 不再支持）
-2. clone 官方仓库 → 把 `xiaozhi-board/demo3-robot-s3/` 拷入 `main/boards/`
-3. 改 2 处注册（CMakeLists.txt + Kconfig.projbuild，精确写法见 [`xiaozhi-board/INSTALL.md`](../xiaozhi-board/INSTALL.md)）
-4. `idf.py build flash` → xiaozhi.me 激活 → **开聊**
+2. `cd xiaozhi-esp32 && idf.py set-target esp32s3`
+3. `idf.py menuconfig` → Xiaozhi Assistant → Target Board 选 **demo3 robot**
+4. `idf.py build flash monitor` → xiaozhi.me 激活 → **开聊**
 5. 对机器人说「点一下头」「看左边」—— 舵机经 MCP 工具响应语音指令 ✨
 
 已在板级包里实现的定制：

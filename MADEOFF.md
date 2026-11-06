@@ -14,9 +14,9 @@
 | v0.4 经典版 | ESP32-WROOM-32 | 表情/舵机/触摸/蜂鸣器/WiFi时钟 ✅ 已编译通过 |
 | v0.5.1 语音版 | ESP32-S3-DevKitC-1 | 上述全部 + INMP441麦克风 + MAX98357A功放（蜂鸣器退役），回声自测就绪，小智AI迁移路线完成 |
 
-- 仓库：https://github.com/hyyzzby/demo3_ESP32 （public, main 分支, 12 个提交）
+- 仓库：https://github.com/hyyzzby/demo3_ESP32 （public, main 分支）
 - 本地：`D:\project-base\demo3_ESP32`
-- 小智官方源码（路线B参考）：`D:\project-base\xiaozhi-esp32`（shallow clone，勿删）
+- 小智官方源码：**已并入本仓库** `xiaozhi-esp32/`（vendored 快照，含已就位的 demo3 板级 + 两处注册，见其 `UPSTREAM.md`）
 - GitHub 账号：hyyzzby（gh CLI + classic token 在 keyring，git 代理已配 127.0.0.1:18899）
 
 ## 二、已完成 ✅
