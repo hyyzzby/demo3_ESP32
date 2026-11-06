@@ -32,11 +32,11 @@
 - ✅ 系统代理确认：`127.0.0.1:16470`（约 2.8MB/s 吞吐）
 - ✅ 本地仓库 git 身份（占位符）：demo3-dev / demo3-dev@users.noreply.github.com
 
-### 工具链下载（进行中，暂停时状态）
-- ✅ 平台 espressif32@6.12.0 → **已装好**
-- ⏳ toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5（~140MB，正在下载）
-- ⏳ tool-esptoolpy（~2MB，排队）
-- 日志：`D:\pio_pkgs\install612.log`
+### 工具链下载（已完成 ✅ 2026-11-06 暂停后自动跑完）
+- ✅ 平台 espressif32@6.12.0 → 已装好
+- ✅ toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5（397MB）→ 已装好
+- ✅ tool-esptoolpy @ 2.40900.250804 → 已装好
+- 结论：**编译环境完全就绪，续接时直接从「五、下一步计划」第 2 步开始**
 
 ## 三、未完成 ⏳
 
