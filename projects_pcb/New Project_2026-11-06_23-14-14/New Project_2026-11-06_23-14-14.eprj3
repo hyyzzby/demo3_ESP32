@@ -31,8 +31,8 @@
         "name": "Schematic1",
         "board": "2438484a6453ff5f",
         "source": "",
-        "version": "1793981405358",
-        "updateTime": 1793981405358
+        "version": "1794024869346",
+        "updateTime": 1794024869346
       }
     },
     "sheets": {
@@ -42,8 +42,8 @@
         "schematic_uuid": "fc8c24230e9189be",
         "zIndex": 1,
         "source": "",
-        "version": "1793981404286",
-        "updateTime": 1793981404286
+        "version": "1794024869346",
+        "updateTime": 1794024869346
       },
       "2fe80273c9a16dcd": {
         "uuid": "2fe80273c9a16dcd",
@@ -51,8 +51,17 @@
         "schematic_uuid": "fc8c24230e9189be",
         "zIndex": 2,
         "source": "",
-        "version": "1793981405358",
-        "updateTime": 1793981405358
+        "version": "1794023413632",
+        "updateTime": 1794023413632
+      },
+      "330369863c4b2f54": {
+        "uuid": "330369863c4b2f54",
+        "title": "P3",
+        "schematic_uuid": "fc8c24230e9189be",
+        "zIndex": 3,
+        "source": "",
+        "version": "1794024133438",
+        "updateTime": 1794024133438
       }
     },
     "pcbs": {
@@ -62,8 +71,8 @@
         "board": "2438484a6453ff5f",
         "parent_uuid": "",
         "source": "",
-        "version": "1793978128207",
-        "updateTime": 1793978128207
+        "version": "1794059237517",
+        "updateTime": 1794059237517
       }
     },
     "panels": {

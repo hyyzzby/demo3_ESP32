@@ -1,0 +1,1 @@
+{"connections":[{"pin":"U1:IO4","kind":"net_label","net":"MIC_SCK"},{"pin":"U1:IO5","kind":"net_label","net":"MIC_WS"},{"pin":"U1:IO7","kind":"net_label","net":"SPK_DIN"},{"pin":"U1:IO8","kind":"net_label","net":"SDA"},{"pin":"U1:IO2","kind":"net_label","net":"LDR_ADC"},{"pin":"U1:EPAD","kind":"gnd","net":"GND"}]}

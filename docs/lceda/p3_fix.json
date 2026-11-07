@@ -1,0 +1,1 @@
+{"connections":[{"pin":"R6:1","kind":"net_label","net":"LDR_ADC"},{"pin":"R6:2","kind":"gnd","net":"GND"},{"pin":"LDR1:1","kind":"power","net":"+3V3"},{"pin":"LDR1:2","kind":"net_label","net":"LDR_ADC"}]}

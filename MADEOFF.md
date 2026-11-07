@@ -143,3 +143,23 @@ IO4=MIC_SCK IO5=MIC_WS IO6=MIC_SD IO7=SPK_DIN IO15=SPK_BCLK IO16=SPK_LRC IO8=SDA
 - block-apply 落块前**必须确认活动页**（--doc P1 有时未生效，LED块落到了P2）；apply 后立即 sch list 验证
 - prim-delete 显示"组注册将移除"不等于已删——删后必须 sch list 复读
 - U1 右缘引脚 stub 出线 20px 即 665 列，与块布局的器件体冲突时会静默漂浮——用 --offset 40 或先挪遮挡器件
+
+## 📌 附录3：立创EDA PCB 设计进展（2026-11-07）
+
+### 已完成 ✅
+- 原理图 3 页全部完成（0 悬浮脚，网表验证 15 个信号网络全对）：P1=MCU+按键+LED，P2=USB-C电源+AMS1117，P3=外设接口（J21麦克风 J22功放 J23喇叭 J24 OLED J25/J26舵机 J27舵机电源 J28触摸 LDR1 R4）
+- 关键修复：IO7/IO8 曾被短路到 3V3 轨（已解除）；IO19/20 网名统一为 USB_HOST_DP/DM（USB 烧录链路打通）；3V3/+3V3 轨合并
+- PCB：30 器件导入 ✓、板框 60×50mm 圆角 ✓、约束布局（0 短路 0 重叠 0 出板）✓、天线禁布区 ✓、官方路由器布线（28+5/32 网）✓、双面 GND 铺铜 ✓
+- 工程文件已入 git：projects_pcb/New Project_2026-11-06_23-14-14/
+
+### DRC 剩余 20 项违规（下一段工作）
+- 13× 间距错误：主要是 **+5V_SERVO 走线穿过 J23(喇叭座) SPK− 焊盘** + 少量丝印压焊盘 → 在 Pro GUI 里把 J23 挪开重新布该线，或删该线手动重布
+- 10× 连接错误：未布线的网络（MCU_TX/RX 单端需补 UART 座或接受、D1_N4 孤儿线删除）
+- 1× 网表错误：board rebind 检查（board list 显示绑定正常，可能为陈旧提示）
+- 处理路径：GUI 里跑 DRC 面板逐条 goto 修复，或继续 CLI 迭代（`pcb drc` + 定点 `pcb modify`/`prim-delete`）
+
+### 环境（重启电脑后恢复顺序）
+1. 打开立创EDA专业版 + 打开工程 New Project_2026-11-06_23-14-14
+2. `$cli = 'C:\Users\14363\.local\bin\easyeda.exe'; Start-Process $cli -ArgumentList daemon,start -WindowStyleHidden`（或任意命令自动拉起）
+3. 双窗口注意：electron=原理图 / browser=PCB，命令用 --window 或 --project 路由
+4. git 代理当前 127.0.0.1:21956（换网记得改）
